@@ -117,19 +117,22 @@ function Contacto (nombre, apellido, telefono) {
 |==================================================================*/
 
 let coche = {
-    marca: 'Renault',
-    tipo: 'deportivo',
-    caracteristicas: {
-      cilindrada: '2200', 
-      motor: 'gasolina'
-    }
+  marca: 'Renault',
+  tipo: 'deportivo',
+  caracteristicas: {
+    cilindrada: '2200', 
+    motor: 'gasolina'
   }
-  
-  function contarPropiedades () {
-   
-  }
+}
 
-  console.log(contarPropiedades());
+function contarPropiedades () {
+   {
+    return Object.keys(coche).length;
+  }
+ 
+}
+
+console.log(contarPropiedades());
 
 /*==================================================================|
 | Ejercicio 7.                                                      |
@@ -140,10 +143,18 @@ let coche = {
 |==================================================================*/
 
 let miArray = [1, 2, 3, -5, -6, 10];
+let positivos = "";
 
 function contarPositivos () {
- 
+	for(i=0; i<miArray.length; i++){
+		if(miArray[i] >= 0){
+			positivos += miArray[i] + ", ";
+		}
+	}
+
+	return positivos;
 }
+
 
 console.log(contarPositivos());
 
@@ -158,3 +169,18 @@ console.log(contarPositivos());
 
 miLista = [1, true, 2, 3, 'a', 'b'];
 
+let suma = 0;
+
+function contarPositivos () {
+	for(i=0; i<miLista.length; i++){
+		if(/[1-9]{1,}/.test(miLista[i])){
+			console.log(miLista[i]);
+			suma += miLista[i];
+		}
+	}
+
+	return suma;
+}
+
+
+console.log(contarPositivos());
